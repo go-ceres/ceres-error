@@ -40,10 +40,15 @@ func (e *Error) WithTid(tid string) *Error {
 	return e
 }
 
+// WithPkg 设置出错的包
+func (e *Error) WithPkg(pkg string) *Error {
+	e.Pkg = pkg
+	return e
+}
+
 // New创建一个基本的错误信息
-func New(pkg string, msg string, code ...int32) *Error {
+func New(msg string, code ...int32) *Error {
 	e := &Error{
-		Pkg: pkg,
 		Msg: msg,
 	}
 	if len(code) > 0 {
