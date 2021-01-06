@@ -40,9 +40,9 @@ func (e *Error) WithTid(tid string) *Error {
 	return e
 }
 
-// WithPkg 设置出错的包
-func (e *Error) WithPkg(pkg string) *Error {
-	e.Pkg = pkg
+// WithPkg 设置出错的模块
+func (e *Error) WithMod(mod string) *Error {
+	e.Mod = mod
 	return e
 }
 

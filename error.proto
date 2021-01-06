@@ -4,7 +4,7 @@ option go_package=".;CeresError";
 package errors;
 
 message Error {
-  string pkg = 1;
+  string mod = 1;
   int32 code = 2;
   string msg = 3;
   string id  = 4;
